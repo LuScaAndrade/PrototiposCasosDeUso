@@ -1,0 +1,213 @@
+/* styles.css adicional */
+.uc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subtitle {
+  color: var(--cinza-texto);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Formulários */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.radio-label input[type="radio"] {
+  margin: 0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  background: var(--cinza-claro);
+  border-radius: 8px;
+  padding: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: var(--branco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--verde-primario);
+}
+
+/* Resumos e Estatísticas */
+.resumo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.resumo-item {
+  text-align: center;
+  padding: 1rem;
+  background: var(--verde-claro);
+  border-radius: 8px;
+}
+
+.resumo-valor {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--verde-primario);
+}
+
+.resumo-label {
+  font-size: 0.9rem;
+  color: var(--cinza-texto);
+}
+
+.estatisticas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.estatistica-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--verde-claro);
+  border-radius: 8px;
+}
+
+.estatistica-icon {
+  font-size: 2rem;
+}
+
+.estatistica-valor {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--verde-primario);
+}
+
+.estatistica-label {
+  font-size: 0.9rem;
+  color: var(--cinza-texto);
+}
+
+/* Tabelas */
+.tabela-container {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--branco);
+}
+
+.tabela th,
+.tabela td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabela th {
+  background: var(--verde-claro);
+  color: var(--verde-primario);
+  font-weight: 600;
+}
+
+.tabela tr:hover {
+  background: var(--verde-claro);
+}
+
+/* Listas de registros */
+.lista-registros {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.registro-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--cinza-claro);
+  border-radius: 5px;
+  border-left: 3px solid var(--verde-primario);
+}
+
+.registro-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.registro-data {
+  font-size: 0.9rem;
+  color: var(--cinza-texto);
+}
+
+/* Botões de exportação */
+.botoes-exportacao {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.texto-vazio {
+  text-align: center;
+  color: var(--cinza-texto);
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .resumo-grid,
+  .estatisticas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .botoes-exportacao {
+    flex-direction: column;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+}
